@@ -1,9 +1,8 @@
 ! Title: なんJ拡張フィルター：一般ルール
-! Version: 2020-10-11
+! Version: 2020-11-15
 ! Homepage: https://wikiwiki.jp/nanj-adguard/%E3%81%AA%E3%82%93J%E6%8B%A1%E5%BC%B5%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC
-! GitHub: https://github.com/nanj-adguard2/nanj-kakuchou-filter/blob/master/Readme.md
 ! License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/:http://creativecommons.org/publicdomain/zero/1.0/)
-! Description: 280blockerが未対応の広告等を発見して280blockerを補完するためのユーザールールまたはカスタムフィルタで購読するフィルタ。
+! Description: 280blockerが未対応の広告等を発見して280blockerを補完するためのユーザールールで購読するフィルタ。
 !
 !【広告】
 !
