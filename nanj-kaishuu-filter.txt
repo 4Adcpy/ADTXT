@@ -1,9 +1,8 @@
 ! Title: なんJ改修フィルター
-! Version: 2020-10-11
+! Version: 2020-11-16
 ! Homepage: https://wikiwiki.jp/nanj-adguard/%E3%81%AA%E3%82%93J%E6%94%B9%E4%BF%AE%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC
-! GitHub: https://github.com/nanj-adguard2/nanj-kaishuu-filter/blob/master/Readme.md
 ! License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/)
-! Description: 280blocker for japanese mobile site購読時におけるAdGuard for Androidの不具合を改修するためにユーザールールまたはカスタムフィルタで購読するフィルタ。
+! Description: 280blocker adblock filter購読時におけるAdGuard for Androidの不具合を改修するためにユーザールールで購読するフィルタ。
 !
 !【ウェブサイトが表示されない】
 !
@@ -12,10 +11,6 @@
 !●KONAMIでの不具合への対応
 !https://wikiwiki.jp/nanj-adguard/%E4%B8%8D%E5%85%B7%E5%90%88%E6%83%85%E5%A0%B1#t2453d27
 @@||coremetrics.com^$app=com.adguard.dns
-!
-!●ホウドウキョクでの不具合への対応
-!https://wikiwiki.jp/nanj-adguard/%E4%B8%8D%E5%85%B7%E5%90%88%E6%83%85%E5%A0%B1#a839a111
-houdoukyoku.jp#@#.ad-buttons
 !
 !【広告ブロック解除を要求する警告が出る】
 !
