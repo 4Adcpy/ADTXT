@@ -1,2 +1,3 @@
 ! Title: amazonのスポンサー消すやつ
 www.amazon.co.jp## div[data-component-type="sp-sponsored-result"]
+www.amazon.co.jp## div[data-component-type="sp-sponsored-result"]
