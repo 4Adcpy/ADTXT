@@ -5,4 +5,4 @@ twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp
 twitter.com##  div > article :-abp-contains(プロモーション)
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(キャンペーン))
 twitter.com##  div > article :-abp-contains(キャンペーン)
-twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(トヨタ))
+twitter.com##  div > article :-abp-contains(トヨタ)
