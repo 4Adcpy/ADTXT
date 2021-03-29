@@ -1,4 +1,4 @@
-あｄ! Title: amazonのスポンサー消すやつ
+! Title: amazonのスポンサー消すやつ
 www.amazon.co.jp## div[data-component-type="sp-sponsored-result"]
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(プロモーション))
 twitter.com##  div > article :-abp-contains(プロモーション)
