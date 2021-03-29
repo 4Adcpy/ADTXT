@@ -1,0 +1,82 @@
+! Title: なんJ改修DNSフィルター なんJ拡張フィルター：DNSルール
+! Version: 2020-11-28
+! Homepage: https://wikiwiki.jp/nanj-adguard/%E3%81%AA%E3%82%93J%E6%94%B9%E4%BF%AE%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC
+! License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/)
+! Description: 280blocker domain filter(AdGuard_format)購読時における不具合を改修するためにDNSユーザーフィルタで購読するフィルタ。
+!
+
+!【ウェブサイトが表示されない】
+!
+!●フレッシュアイが表示されない不具合への対応
+!https://wikiwiki.jp/nanj-adguard/%E4%B8%8D%E5%85%B7%E5%90%88%E6%83%85%E5%A0%B1#tab40826
+@@||fresheye.com^
+!
+!【ウェブサイトの表示がおかしい】
+!
+!●KONAMIでの不具合への対応
+!https://wikiwiki.jp/nanj-adguard/%E4%B8%8D%E5%85%B7%E5%90%88%E6%83%85%E5%A0%B1#t2453d27
+@@||coremetrics.com^
+!
+!●Pontaでの不具合への対応
+!https://wikiwiki.jp/nanj-adguard/%E4%B8%8D%E5%85%B7%E5%90%88%E6%83%85%E5%A0%B1#w96f42c5
+@@||mtburn.com^
+!
+!【広告ブロック解除を要求する警告が出る】
+!
+!【アプリの動作がおかしい】
+!
+!●LINE(jp.naver.line.android)での不具合への対応
+!https://wikiwiki.jp/nanj-adguard/%E4%B8%8D%E5%85%B7%E5%90%88%E6%83%85%E5%A0%B1#lc6992b3
+@@||applovin.com^
+!
+!●FOD(air.jp.co.fujitv.fodviewer)での不具合への対応
+!https://wikiwiki.jp/nanj-adguard/%E4%B8%8D%E5%85%B7%E5%90%88%E6%83%85%E5%A0%B1#a23f5dc9
+@@||web-jp.ad-v.jp^
+!
+!【不具合内容が不明】
+!
+!【その他】
+!
+!【不具合・デメリットを含むルール】
+!◆以下のルールの「!」を外してDNSユーザーフィルタに追加してください。
+!
+!●LINE(jp.naver.line.android)のLINE Out Freeで通話可能にするためのルール
+!★これを使用するとGoogle開発者サービス経由の広告を防ぐことができません。
+!@@||doubleclick.net^
+!@@||google-analytics.com^
+!@@||gstatic.com^
+
+
+!【アプリ】
+!●ES File Explorer(現在はGoogle Playから削除)がバックグラウンドで密かに通信しているURL
+||appsflyer.com^
+||estrongs.com^
+||baidu.com^
+||duapps.com^
+!
+!●LINE(jp.naver.line.android)のニュースの広告
+!https://egg.5ch.net/test/read.cgi/android/1544804906/493
+||a.line.me^
+!
+!●ChMate(jp.co.airfront.android.a2chMate)の広告
+||amazon-adsystem.com^
+!
+!【不具合・デメリットを含むルール】
+!◆以下のルールの「!」を外してDNSユーザーフィルタに追加してください。
+!
+!●google-analytics(プライバシー)
+!★280には「||ssl-google-analytics.l.google.com」としかありません。一部のアプリ・サイトでは不具合が出ます。その場合は「||google-analytics.com^$domain=~domain1.com|~domain2.com」と並べてください。不具合が出た場合はWikiで報告・相談しましょう。
+!||google-analytics.com^
+!
+!●LINE(jp.naver.line.android)の広告
+!★一部機能が正常に動作しなくなります。
+!https://egg.5ch.net/test/read.cgi/android/1554363290/960
+!||obs.line-scdn.net^
+!||scdn.line-apps.com^
+!★「スタティックファイルのホスティングとしても使われている」との報告あり。
+!https://logroid.blogspot.com/2012/06/adaway-hosts-for-japan.html?showComment=1581855388991#c7086501616772860789
+!||d.line-scdn.net^
+!
+!●graph.facebook.com使用アプリ(MX Player等)の広告
+!★無料版ユーザーでもgraph.facebook.com使用アプリ(MX Player等)の広告をブロックすることができるようになりますが、一部のアプリのFacebook連携で不具合が発生する場合があります。
+!||graph.facebook.com^
