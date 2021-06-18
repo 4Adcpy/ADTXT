@@ -6,8 +6,33 @@
 ! This file is only permitted for personal use under copyright law.
 ! Commercial use or  redistribution are prohibited except as permitted by copyright law.
 !
-! Last updated: 2021-05-18
-##.blocker280-20210518
+! Last updated: 2021-06-08
+##.blocker280-20210608
+
+!2021/06/08
+soubun.com##.spjournalbnr
+dic.pixiv.net###ad-d-sp-toparticle
+dic.pixiv.net###ad-d-sp-rectangle
+dic.pixiv.net###ad-d-sp-footer
+||google.com/async/ampfp
+||google.co.jp/async/ampfp
+google.co.jp##a[data-ad-tracking-url*="googleadservices"]
+google.com##a[data-ad-tracking-url*="googleadservices"]
+!google.co.jp##g-bottom-sheet
+!google.com##g-bottom-sheet
+
+
+!2021/05/26
+||duckdns.org^
+
+orangepage.net##.sponsored
+manabitimes.jp##.a--banner
+tenshoku.mynavi.jp###karte-c
+uraaka.com##.ad-gallery
+keyaki.tech##[id*="rss"]
+||s.yimg.jp/images/jpnews/v2/all/images/sns_
+||keyaki.tech/img
+
 
 !2021/05/18
 tenshoku.mynavi.jp###karte-c
@@ -22,7 +47,10 @@ youtube.com##.ytp-cued-thumbnail-overlay-image
 !2021/05/17
 =adhost$domain=youtube.com|googlevideo.com
 =adunit$domain=youtube.com|googlevideo.com
-ctier=$domain=youtube.com|googlevideo.com
+
+!Problems may occur on non-iOS devices
+!ctier=$domain=youtube.com|googlevideo.com
+
 !||googlevideo.com/*adhost
 !||youtube.com/*adunit
 
@@ -192,8 +220,6 @@ simchange.jp##.hikaku
 comingout.tokyo##.alignnone
 comingout.tokyo##.review
 gamespark.jp##.pickup-list
-google.co.jp##g-bottom-sheet
-google.com##g-bottom-sheet
 hunade.com##.post-matome-area
 nan-net.jp##[id^="active_overlay"]
 vipsister23.com##blockquote
@@ -5325,3 +5351,4 @@ nakasoku.blog18.fc2.com##.rss_box
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~news-edge.com##a[href*=".news-edge.com"] 
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~world-best-news.doorblog.jp##a[href*="//world-best-news.doorblog.jp/"]
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~matometatta-news.net##a[href*="//matometatta-news.net/"]
+
