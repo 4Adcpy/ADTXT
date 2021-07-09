@@ -1,6 +1,6 @@
 ! Title: amazonのスポンサー消すやつ
 www.amazon.co.jp## div[data-component-type="sp-sponsored-result"]
-www.amazon.co.jp## div.s-widget.s-flex-full-width.s-result-item.a-spacing-none.a-section:nth-of-type(1)
+www.amazon.co.jp## div.s-widget.s-flex-full-width.s-result-item.a-spacing-none.a-section
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(プロモーション))
 twitter.com##  div > article :-abp-contains(プロモーション)
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(企業からのツイート))
