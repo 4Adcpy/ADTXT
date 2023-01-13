@@ -8,4 +8,4 @@ twitter.com##  div > article :-abp-contains(企業からのツイート)
 twitter.com#$# a[href$="/analytics"]{display: none !important;}
 twitter.com#$# a[href$="/twitter_blue_sign_up"]{display: none !important;}
 twitter.com#$# a[href$="/explore"]{display: none !important;}
-twitter.com#$# article:["おすすめユーザー"]{display: none !important;}
+twitter.com#?#article:(おすすめユーザー){display: none !important;}
