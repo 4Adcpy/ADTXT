@@ -11,4 +11,4 @@ twitter.com#$# a[href$="/explore"]{display: none !important;}
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(さらに表示))
 twitter.com##  div > article :-abp-contains(さらに表示)
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(がフォローしています))
-twitter.com##  div > article :-abp-contains(がフォローしています)
+twitter.com##  div > article :(がフォローしています)
