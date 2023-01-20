@@ -8,7 +8,4 @@ twitter.com##  div > article :-abp-contains(企業からのツイート)
 twitter.com#$# a[href$="/analytics"]{display: none !important;}
 twitter.com#$# a[href$="/twitter_blue_sign_up"]{display: none !important;}
 twitter.com#$# a[href$="/explore"]{display: none !important;}
-twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(さらに表示))
-twitter.com##  div > article :-abp-contains(さらに表示)
-twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(がフォローしています))
-twitter.com##  div > article :(がフォローしています)
+twitter.com#$# a[href$="/communityTweets"]{display: none !important;}
