@@ -1,4 +1,5 @@
 ! Title: amazonのスポンサー消すやつ
+!ツイッターの広告も消す
 www.amazon.co.jp## div[data-component-type="sp-sponsored-result"]
 www.amazon.co.jp## div.s-widget.s-flex-full-width.s-result-item.a-spacing-none.a-section
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(プロモーション))
