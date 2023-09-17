@@ -4,8 +4,6 @@ www.amazon.co.jp## div.s-widget.s-flex-full-width.s-result-item.a-spacing-none.a
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(プロモーション))
 twitter.com##  div > article :-abp-contains(プロモーション)
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(企業からのツイート))
-www.amazon.co.jp## div[data-component-type=".dbs-widget-head,.a-carousel-heading,.dbs-widget-head-title,.unified_ad_labeling_title_margin,.sp_book_carousel_header"]
-www.amazon.co.jp## div[targetTitleList="人気のFliptoon 「毎日無料」マンガ",  "人気のインディーズマンガ", "高評価のインディーズマンガ","無料マンガ ランキング インディーズ","この商品に関連するスポンサー","Kindle Unlimited読み放題対象のマンガ","無料マンガ ランキング インディーズ"]
 twitter.com##  div > article :-abp-contains(企業からのツイート)
 twitter.com#$# a[href$="/analytics"]{display: none !important;}
 twitter.com#$# a[href$="/twitter_blue_sign_up"]{display: none !important;}
