@@ -4,7 +4,7 @@ www.amazon.co.jp## div.s-widget.s-flex-full-width.s-result-item.a-spacing-none.a
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(プロモーション))
 twitter.com##  div > article :-abp-contains(プロモーション)
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(企業からのツイート))
-www.amazon.co.jp## div[data-component-type="無料マンガ ランキング インディーズ"]
+www.amazon.co.jp## div[data-component-type=".dbs-widget-head,.a-carousel-heading,.dbs-widget-head-title,.unified_ad_labeling_title_margin,.sp_book_carousel_header"]
 
 
 twitter.com##  div > article :-abp-contains(企業からのツイート)
