@@ -3,9 +3,11 @@ www.amazon.co.jp## div[data-component-type="sp-sponsored-result"]
 www.amazon.co.jp## div.s-widget.s-flex-full-width.s-result-item.a-spacing-none.a-section
 www.amazon.co.jp## #manga-widget-group_feature_div.celwidget
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(プロモーション))
-twitter.com##  div > article :-abp-contains(プロモーション)
 twitter.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(企業からのツイート))
-twitter.com##  div > article :-abp-contains(企業からのツイート)
+twitter.com#?#  div > article :-abp-contains(プロモーション)
+twitter.com#?#  div > article :-abp-contains(企業からのツイート)
+! twitter.com##  div > article :-abp-contains(プロモーション)
+! twitter.com##  div > article :-abp-contains(企業からのツイート)
 twitter.com#$# a[href$="/analytics"]{display: none !important;}
 twitter.com#$# a[href$="/twitter_blue_sign_up"]{display: none !important;}
 twitter.com#$# a[href$="communityTweets"]{display: none !important;}
