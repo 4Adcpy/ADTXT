@@ -5,6 +5,7 @@ www.amazon.co.jp## div[data-component-type="sp-sponsored-result"]
 www.amazon.co.jp## div.s-widget.s-flex-full-width.s-result-item.a-spacing-none.a-section
 www.amazon.co.jp## #manga-widget-group_feature_div.celwidget
 x.com#$# a[href$="/analytics"]{display: none !important;}
+x.com###layers > div.css-175oi2r.r-aqfbo4.r-zchlnj.r-1d2f490.r-1xcajam.r-1p0dtai.r-12vffkv:first-child > div.css-175oi2r.r-12vffkv:nth-child(2) > div.css-175oi2r.r-12vffkv > div.css-175oi2r.r-14lw9ot.r-1dgieki.r-1efd50x.r-5kkj8d.r-97e31f.r-o4yl4f > div.css-175oi2r.r-f8sm7e.r-13qz1uu > nav.css-175oi2r.r-18u37iz.r-drjvcx.r-ripixn.r-13qz1uu > a.css-175oi2r.r-6koalj.r-eqz5dr.r-16y2uox.r-1awozwy.r-oucylx.r-rull8r.r-wgabs5.r-1777fci.r-1ny4l3l.r-1loqt21:nth-child(3)
 !x.com#$# a[href$="/bookmarks"]{display: none !important;}
 !x.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(プロモーション))
 !x.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(企業からのツイート))
