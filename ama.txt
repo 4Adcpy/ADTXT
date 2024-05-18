@@ -13,4 +13,4 @@ x.com#$# a[href$="/i/premium_sign_up"]{display: none !important;}
 x.com#$# a[href$="jobs"]{display: none !important;}
 x.com#$# a[href$="/settings/monetization"]{display: none !important;}
 x.com#$# a[href$="/i/bookmarks"]{display: none !important;}
-x.com#$# button:matches-attr("data-testid"="bookmark")
+x.com##button:matches-attr("data-testid"="bookmark")
