@@ -6,6 +6,7 @@ www.amazon.co.jp## div.s-widget.s-flex-full-width.s-result-item.a-spacing-none.a
 www.amazon.co.jp## #manga-widget-group_feature_div.celwidget
 amazon.co.jp###desktop-manga-storefront-btf-0
 amazon.co.jp###tablet-manga-storefront-atf-0
+x.com##button:matches-attr("data-testid"="bookmark")
 x.com#$# a[href$="/analytics"]{display: none !important;}
 x.com#$# a[href$="/i/grok"]{display: none !important;}
 x.com#$# a[href$="/communities"]{display: none !important;}
@@ -13,4 +14,3 @@ x.com#$# a[href$="/i/premium_sign_up"]{display: none !important;}
 x.com#$# a[href$="jobs"]{display: none !important;}
 x.com#$# a[href$="/settings/monetization"]{display: none !important;}
 x.com#$# a[href$="/i/bookmarks"]{display: none !important;}
-x.com##button:matches-attr("data-testid"="bookmark")
