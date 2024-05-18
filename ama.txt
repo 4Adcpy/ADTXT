@@ -6,7 +6,7 @@ www.amazon.co.jp## div.s-widget.s-flex-full-width.s-result-item.a-spacing-none.a
 www.amazon.co.jp## #manga-widget-group_feature_div.celwidget
 x.com#$# a[href$="/analytics"]{display: none !important;}
 x.com#$# a[href$="/i/grok"]{display: none !important;}
-x.com#$# a[href$="/okuh_/communities"]{display: none !important;}
+x.com#$# a[href$="/communities"]{display: none !important;}
 
 !x.com#$# a[href$="/bookmarks"]{display: none !important;}
 !x.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(プロモーション))
