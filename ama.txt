@@ -7,19 +7,4 @@ www.amazon.co.jp## #manga-widget-group_feature_div.celwidget
 x.com#$# a[href$="/analytics"]{display: none !important;}
 x.com#$# a[href$="/i/grok"]{display: none !important;}
 x.com#$# a[href$="/communities"]{display: none !important;}
-!x.com#$# a[href$="/bookmarks"]{display: none !important;}
-!x.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(プロモーション))
-!x.com#?#article:-abp-has(article > div > div > div > div > div > span:-abp-contains(企業からのツイート))
-!x.com#?#  div > article :-abp-contains(プロモーション)
-!x.com#?#  div > article :-abp-contains(企業からのツイート)
-!x.com##  div > article :-abp-contains(プロモーション)
-!x.com##  div > article :-abp-contains(企業からのツイート)
-!x.com#$# a[href$="/twitter_blue_sign_up"]{display: none !important;}
-!x.com#$# a[href$="communityTweets"]{display: none !important;}
-!x.com#$# a[href$="followeesFollows"]{display: none !important;}
-!x.com#$# a[href$="likedTweets"]{display: none !important;}
-!x.com#$# a[href$="quoteTweets"]{display: none !important;}
-!x.com#$# a[href$="repliedToTweets"]{display: none !important;}
-!x.com#$# a[href$="suggestedTopicTweets"]{display: none !important;}
-!x.com#$# a[href$="verifiedAccounts"]{display: none !important;}
-!x.com#$# a[href$="twf_cnt_promo"]{display: none !important;}
+x.com##button:matches-attr("data-testid"="bookmark")
