@@ -25,9 +25,9 @@ x.com##[aria-label="タイムライン: タイムラインを検索"] [data-test
 x.com##[aria-label="トレンド"] > div > div
 x.com##[aria-label="トレンド"] > div > div:has(:is(form[aria-label="検索"],[data-testid="searchFiltersAdvancedSearch"])):style(display:flex!important)
 ! 「おすすめ」と「フォロー中」のタブを非表示
-x.com##[aria-label="ホームタイムライン"] > div:first-child:has(> div:first-child > div > div > nav > div > div:nth-child(2) > div > div:first-child)
+! x.com##[aria-label="ホームタイムライン"] > div:first-child:has(> div:first-child > div > div > nav > div > div:nth-child(2) > div > div:first-child)
 ! おすすめだけ非表示
-x.com##[aria-label="ホームタイムライン"] > div:first-child > div:first-child > div > div > nav > div > div:nth-child(2) > div > div:first-child
+! x.com##[aria-label="ホームタイムライン"] > div:first-child > div:first-child > div > div > nav > div > div:nth-child(2) > div > div:first-child
 ! トレンドをワード指定して非表示
 x.com##div[data-testid="trend"]:has-text(/日本のトレンド/)
 x.com##div[aria-label="タイムライン: 話題を検索"] div[data-testid="trend"] > div[id] > div:first-child > div:first-child:not(:only-child)
