@@ -1,67 +1,8 @@
 ! Title: amazonのスポンサー消すやつ
-! Version:0.0.6
+! Version:0.0.7
 ! アマゾンのスポンサーを消す
 www.amazon.co.jp## div[data-component-type="sp-sponsored-result"]
 www.amazon.co.jp## div.s-widget.s-flex-full-width.s-result-item.a-spacing-none.a-section
 www.amazon.co.jp## #manga-widget-group_feature_div.celwidget
 amazon.co.jp###desktop-manga-storefront-btf-0
 amazon.co.jp###tablet-manga-storefront-atf-0
-x.com##button:matches-attr("data-testid"="bookmark")
-x.com#$# a[href$="/i/grok"]{display: none !important;}
-x.com#$# a[href$="/i/spaces/start"]{display: none !important;}
-x.com#$# a[href$="/communities"]{display: none !important;}
-x.com#$# a[href$="/i/premium_sign_up"]{display: none !important;}
-x.com#$# a[href$="jobs"]{display: none !important;}
-x.com#$# a[href$="/settings/monetization"]{display: none !important;}
-x.com#$# a[href$="/i/bookmarks"]{display: none !important;}
-!　おすすめユーザーを非表示
-x.com##[aria-label^=タイムライン][aria-label$="さんのポスト"]  [data-testid="cellInnerDiv"]:is(:has(+div [aria-label^="フォロー "][role="button"]),:has([aria-label^="フォロー "][role="button"]),:has(a[href^="/i/connect_people?"]),:has(a[href^="/i/connect_people?"])+div:has(>div>div:empty))
-! 「新しいリストを見つける」を非表示
-x.com##[aria-label="タイムライン: 自分のリスト"] [data-testid="cellInnerDiv"]:is(:has(h2):has(+div [aria-label="フォロー"][role="button"]),:has([aria-label="フォロー"][role="button"]),:has([href="/i/lists/suggested"]))
-! 「コミュニティを探す」を非表示
-x.com##[aria-label="タイムライン: タイムラインを検索"] [data-testid="cellInnerDiv"]:is(:has(+ div [href^="/i/communities/"]),:has([href="/i/communities/suggested"]),:has([href="/i/communities/suggested"]) + div:has(> div > div:empty))
-! サイドバーの「いまどうしてる？」「スペース」「認証を受ける」「おすすめユーザー」「関連性の高いアカウント」を非表示
-x.com##[aria-label="トレンド"] > div > div
-x.com##[aria-label="トレンド"] > div > div:has(:is(form[aria-label="検索"],[data-testid="searchFiltersAdvancedSearch"])):style(display:flex!important)
-! 「おすすめ」と「フォロー中」のタブを非表示
-x.com##[aria-label="ホームタイムライン"] > div:first-child:has(> div:first-child > div > div > nav > div > div:nth-child(2) > div > div:first-child)
-! おすすめだけ非表示
-!x.com##[aria-label="ホームタイムライン"] > div:first-child > div:first-child > div > div > nav > div > div:nth-child(2) > div > div:first-child
-! トレンドをワード指定して非表示
-x.com##div[data-testid="trend"]:has-text(/トレンド/)
-x.com##div[aria-label="タイムライン: 話題を検索"] div[data-testid="trend"] > div[id] > div:first-child > div:first-child:not(:only-child)
-x.com##div[aria-label="タイムライン: 話題を検索"] div[data-testid="trend"] > div[id] > div:first-child > div:nth-child(2)
-! トレンド要素以外を非表示
-x.com##[aria-label="タイムライン: 話題を検索"] > div > div
-x.com##[data-testid="cellInnerDiv"]:has([data-testid="trend"]):style(display: initial !important)
-x.com##[aria-label="タイムライン: 話題を検索"] [data-testid="cellInnerDiv"]:has(h2 > div > span:has-text(トレンド)):style(display: initial !important)
-! ニュースやスポーツなどのタブを非表示
-! おすすめ
-x.com##a[href="/explore/tabs/for_you"]:upward(1)
-! トレンド
-x.com##a[href="/explore/tabs/keyword"]:upward(1)
-! ニュース
-x.com##a[href="/explore/tabs/news"]:upward(1)
-! スポーツ
-x.com##a[href="/explore/tabs/sports"]:upward(1)
-! エンターテイメント
-x.com##a[href="/explore/tabs/entertainment"]:upward(1)
-! 省略されたツイートを表示
-x.com##[data-testid="tweetText"]:style(line-height: normal !important; -webkit-line-clamp: initial !important;)
-! 「ツイートの作成者が、このツイートをセンシティブな内容として設定しました。」を非表示
-x.com##article[data-testid="tweet"] div[aria-labelledby] > div > div > div > div > div:style(filter: none !important)
-x.com##article[data-testid="tweet"] div[aria-labelledby] > div:not([data-testid]) > div:not([role="button"]) > div:only-child > div > div:nth-child(2):not([data-testid="tweetText"])
-x.com##[aria-label$="さんのメディア"] [role="listitem"] > div > div > div > div:first-child:style(filter: none !important)
-x.com##[aria-label$="さんのメディア"] [role="listitem"] > div > div > div > div:last-child
-! リツイート数やいいね数、リプライ数、ブックマーク数を非表示
-! ブックマーク数
-x.com##[aria-label="タイムライン: 会話"] article[tabindex="-1"] [data-testid="removeBookmark"] > div > div:nth-child(2)
-x.com##[aria-label="タイムライン: 会話"] article[tabindex="-1"] [data-testid="bookmark"] > div > div:nth-child(2)
-! 閲覧数・インプレッション数を非表示
-x.com##[aria-label="タイムライン: 会話"] article[tabindex="-1"] div[aria-hidden="true"]:nth-child(2)
-x.com##[aria-label="タイムライン: 会話"] article[tabindex="-1"] div[aria-hidden="true"]:nth-child(2) + div:last-child
-x.com##article[tabindex="0"] div[role="group"] > div:nth-child(4)
-x.com##a[href$="/analytics"]:upward(1)
-! 「もっと見つける」を非表示
-x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(h2:has-text(もっと見つける))
-x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(h2:has-text(もっと見つける)) ~ div
