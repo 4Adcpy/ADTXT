@@ -32,15 +32,16 @@ x.com##[aria-label="ホームタイムライン"] > div:first-child:has(> div:fi
 !x.com##[aria-label="タイムライン: 話題を検索"] [data-testid="cellInnerDiv"]:has(h2 > div > span:has-text(トレンド)):style(display: initial !important)
 ! ニュースやスポーツなどのタブを非表示
 ! おすすめ
-x.com##a[href="/explore/tabs/for_you"]:upward(1)
+!x.com##a[href="/explore/tabs/for_you"]:upward(1)
 ! トレンド
-x.com##a[href="/explore/tabs/keyword"]:upward(1)
+!x.com##a[href="/explore/tabs/keyword"]:upward(1)
 ! ニュース
-x.com##a[href="/explore/tabs/news"]:upward(1)
+!x.com##a[href="/explore/tabs/news"]:upward(1)
 ! スポーツ
-x.com##a[href="/explore/tabs/sports"]:upward(1)
+!x.com##a[href="/explore/tabs/sports"]:upward(1)
 ! エンターテイメント
-x.com##a[href="/explore/tabs/entertainment"]:upward(1)
+!x.com##a[href="/explore/tabs/entertainment"]:upward(1)
+
 ! 省略されたツイートを表示
 x.com##[data-testid="tweetText"]:style(line-height: normal !important; -webkit-line-clamp: initial !important;)
 ! 「ツイートの作成者が、このツイートをセンシティブな内容として設定しました。」を非表示
