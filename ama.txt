@@ -1,5 +1,5 @@
 ! Title: amazonのスポンサー消すやつ
-! Version:0.0.5
+! Version:0.0.6
 ! アマゾンのスポンサーを消す
 www.amazon.co.jp## div[data-component-type="sp-sponsored-result"]
 www.amazon.co.jp## div.s-widget.s-flex-full-width.s-result-item.a-spacing-none.a-section
@@ -7,7 +7,6 @@ www.amazon.co.jp## #manga-widget-group_feature_div.celwidget
 amazon.co.jp###desktop-manga-storefront-btf-0
 amazon.co.jp###tablet-manga-storefront-atf-0
 x.com##button:matches-attr("data-testid"="bookmark")
-! x.com#$# a[href$="/analytics"]{display: none !important;}
 x.com#$# a[href$="/i/grok"]{display: none !important;}
 x.com#$# a[href$="/i/spaces/start"]{display: none !important;}
 x.com#$# a[href$="/communities"]{display: none !important;}
@@ -16,7 +15,7 @@ x.com#$# a[href$="jobs"]{display: none !important;}
 x.com#$# a[href$="/settings/monetization"]{display: none !important;}
 x.com#$# a[href$="/i/bookmarks"]{display: none !important;}
 !　おすすめユーザーを非表示
-!x.com##[aria-label^=タイムライン][aria-label$="さんのポスト"]  [data-testid="cellInnerDiv"]:is(:has(+div [aria-label^="フォロー "][role="button"]),:has([aria-label^="フォロー "][role="button"]),:has(a[href^="/i/connect_people?"]),:has(a[href^="/i/connect_people?"])+div:has(>div>div:empty))
+x.com##[aria-label^=タイムライン][aria-label$="さんのポスト"]  [data-testid="cellInnerDiv"]:is(:has(+div [aria-label^="フォロー "][role="button"]),:has([aria-label^="フォロー "][role="button"]),:has(a[href^="/i/connect_people?"]),:has(a[href^="/i/connect_people?"])+div:has(>div>div:empty))
 ! 「新しいリストを見つける」を非表示
 x.com##[aria-label="タイムライン: 自分のリスト"] [data-testid="cellInnerDiv"]:is(:has(h2):has(+div [aria-label="フォロー"][role="button"]),:has([aria-label="フォロー"][role="button"]),:has([href="/i/lists/suggested"]))
 ! 「コミュニティを探す」を非表示
@@ -25,9 +24,9 @@ x.com##[aria-label="タイムライン: タイムラインを検索"] [data-test
 x.com##[aria-label="トレンド"] > div > div
 x.com##[aria-label="トレンド"] > div > div:has(:is(form[aria-label="検索"],[data-testid="searchFiltersAdvancedSearch"])):style(display:flex!important)
 ! 「おすすめ」と「フォロー中」のタブを非表示
-!x.com##[aria-label="ホームタイムライン"] > div:first-child:has(> div:first-child > div > div > nav > div > div:nth-child(2) > div > div:first-child)
+x.com##[aria-label="ホームタイムライン"] > div:first-child:has(> div:first-child > div > div > nav > div > div:nth-child(2) > div > div:first-child)
 ! おすすめだけ非表示
-x.com##[aria-label="ホームタイムライン"] > div:first-child > div:first-child > div > div > nav > div > div:nth-child(2) > div > div:first-child
+!x.com##[aria-label="ホームタイムライン"] > div:first-child > div:first-child > div > div > nav > div > div:nth-child(2) > div > div:first-child
 ! トレンドをワード指定して非表示
 x.com##div[data-testid="trend"]:has-text(/トレンド/)
 x.com##div[aria-label="タイムライン: 話題を検索"] div[data-testid="trend"] > div[id] > div:first-child > div:first-child:not(:only-child)
