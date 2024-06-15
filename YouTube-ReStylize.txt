@@ -23,11 +23,6 @@ youtube.com##ytd-guide-section-renderer:has([title="設定"])
 ! 概要
 youtube.com##tp-yt-app-drawer #footer 
 
-! 設定
-youtube.com##ytd-guide-section-renderer:has([title="映画とテレビ番組"])
-
-
-
 ! ライブ動画のスクロールバーを非表示
 youtube.com###meta.ytd-rich-grid-media:style(scrollbar-width: none !important)
 youtube.com###meta.ytd-video-preview:style(scrollbar-width: none !important)
