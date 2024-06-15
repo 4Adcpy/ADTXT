@@ -2,6 +2,3 @@
 ! Version:0.0.1
 /index.php?main_page=product_info*&cPath=$document,domain=com|net
 /index.php?main_page=product_info&products_id=$document,domain=com|net
-
-
-||.cc^
