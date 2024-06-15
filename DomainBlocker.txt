@@ -1,8 +1,7 @@
 ! Title: comや.netを使う偽ショップを消すやつ
-! Version:0.0.7
-
+! Version:0.0.1
 /index.php?main_page=product_info*&cPath=$document,domain=com|net
 /index.php?main_page=product_info&products_id=$document,domain=com|net
 
-/index.php?main_page=product_info*&cPath=$document,domain=cc
-/index.php?main_page=product_info&products_id=$document,domain=cc
+
+||.cc^
