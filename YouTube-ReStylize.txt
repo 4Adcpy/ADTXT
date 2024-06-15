@@ -1,7 +1,16 @@
+! Title:YouTube-ReStylize
+! Version:0.0.1
+
 ! 広告を消してできる隙間を埋めます。
 youtube.com##ytd-browse:is([page-subtype="home"],[page-subtype="subscriptions"],[page-subtype="channels"]) :is(ytd-rich-grid-row, #contents.ytd-rich-grid-row):style(display: contents !important)
 youtube.com##ytd-rich-item-renderer[is-slim-grid]:first-of-type:style(margin-left: auto !important;)
 youtube.com##ytd-rich-item-renderer[is-slim-grid]:last-of-type:style(margin-right: auto !important;)
+
+!再生回数の少ない動画
+! (Chromium + FF121+) - Hide Homepage Videos Below 1K Views
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-item-renderer:has(#video-title:not(:is([aria-label*=",0"],[aria-label*=",1"],[aria-label*=",2"],[aria-label*=",3"],[aria-label*=",4"],[aria-label*=",5"],[aria-label*=",6"],[aria-label*=",7"],[aria-label*=",8"],[aria-label*=",9"])))
+! (Chromium + FF121+) - Hide Sidebar Videos Below 1K Views
+www.youtube.com##ytd-compact-video-renderer:has(#video-title:not(:is([aria-label*=",0"],[aria-label*=",1"],[aria-label*=",2"],[aria-label*=",3"],[aria-label*=",4"],[aria-label*=",5"],[aria-label*=",6"],[aria-label*=",7"],[aria-label*=",8"],[aria-label*=",9"])))
 
 ! 左サイドバーの「ショート」欄を非表示
 youtube.com##ytd-guide-entry-renderer > [title="ショート"]
@@ -13,6 +22,11 @@ youtube.com##ytd-guide-section-renderer:has(h3:has-text(/YouTube の他のサー
 youtube.com##ytd-guide-section-renderer:has([title="設定"])
 ! 概要
 youtube.com##tp-yt-app-drawer #footer 
+
+! 設定
+youtube.com##ytd-guide-section-renderer:has([title="映画とテレビ番組"])
+
+
 
 ! ライブ動画のスクロールバーを非表示
 youtube.com###meta.ytd-rich-grid-media:style(scrollbar-width: none !important)
