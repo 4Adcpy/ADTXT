@@ -1,0 +1,95 @@
+! 広告を消してできる隙間を埋めます。
+youtube.com##ytd-browse:is([page-subtype="home"],[page-subtype="subscriptions"],[page-subtype="channels"]) :is(ytd-rich-grid-row, #contents.ytd-rich-grid-row):style(display: contents !important)
+youtube.com##ytd-rich-item-renderer[is-slim-grid]:first-of-type:style(margin-left: auto !important;)
+youtube.com##ytd-rich-item-renderer[is-slim-grid]:last-of-type:style(margin-right: auto !important;)
+
+! 左サイドバーの「ショート」欄を非表示
+youtube.com##ytd-guide-entry-renderer > [title="ショート"]
+
+! 探索と他のサービス
+! どちらか一方だけ非表示にするの場合は/と|を消す 例：has-text(YouTube の他のサービス))
+youtube.com##ytd-guide-section-renderer:has(h3:has-text(/YouTube の他のサービス|探索/))
+! 設定
+youtube.com##ytd-guide-section-renderer:has([title="設定"])
+! 概要
+youtube.com##tp-yt-app-drawer #footer 
+
+! ライブ動画のスクロールバーを非表示
+youtube.com###meta.ytd-rich-grid-media:style(scrollbar-width: none !important)
+youtube.com###meta.ytd-video-preview:style(scrollbar-width: none !important)
+
+! Youtube新UIを改善
+! タイトルのフォントサイズを小さく
+youtube.com###title .ytd-watch-metadata:style(font-weight: 400;font-size: 1.8rem;)
+! 概要欄の再生回数と投稿日時を薄く
+youtube.com###info.ytd-watch-metadata:style(color: var(--yt-spec-text-secondary)!important)
+! 概要欄の「もっと見る」と「一部を表示」を薄く
+youtube.com##tp-yt-paper-button#expand:style(color: var(--yt-spec-text-secondary)!important;font-size: 1.3rem!important)
+youtube.com##tp-yt-paper-button#collapse:style(color: var(--yt-spec-text-secondary)!important;font-size: 1.3rem!important)
+! 高評価数を非表示、サイズ調整
+youtube.com##.yt-spec-button-shape-next--icon-leading[aria-pressed] > .yt-spec-button-shape-next__button-text-content
+youtube.com##button.yt-spec-button-shape-next--segmented-start > .yt-spec-button-shape-next__icon:style(margin-right: -6px !important; margin-left: -2px !important;)
+youtube.com##button.yt-spec-button-shape-next--segmented-start > .yt-spec-button-shape-next__icon > yt-icon:style(padding-left: 2px !important;)
+youtube.com##button.yt-spec-button-shape-next--segmented-end:style(width: 46px !important;)
+youtube.com##button.yt-spec-button-shape-next--segmented-end > .yt-spec-button-shape-next__icon:style(margin-left: -3px !important;)
+! 動画下クリップ、Thanks、オフラインを非表示
+youtube.com##yt-button-view-model:has(button[aria-label="Thanks"])
+youtube.com##yt-button-view-model:has(button[aria-label="クリップ"])
+! 動画下共有と保存の文字のみを非表示
+youtube.com##[aria-label="共有"] > .yt-spec-button-shape-next__button-text-content
+youtube.com##[aria-label="再生リストに保存"] > .yt-spec-button-shape-next__button-text-content
+youtube.com##button.yt-spec-button-shape-next--icon-leading > .yt-spec-button-shape-next__icon:style(margin-right: -5px !important; margin-left: -4px !important;)
+! 動画オーバーレイ 前へ次へを非表示
+youtube.com##.ytp-prev-button[data-title-no-tooltip="前へ"]
+youtube.com##.ytp-next-button[data-title-no-tooltip="次へ"]
+! 動画オーバーレイ 字幕使えないときは非表示
+youtube.com##.ytp-subtitles-button[data-title-no-tooltip="字幕を利用できません"]
+! 動画オーバーレイ ミニプレイヤーを非表示
+! youtube.com##.ytp-button.ytp-miniplayer-button
+! 動画オーバーレイ シアターモードを非表示
+! youtube.com##.ytp-button.ytp-size-button
+! 動画オーバーレイ 自動再生を非表示
+! youtube.com##.ytp-button[data-tooltip-target-id="ytp-autonav-toggle-button"]
+
+! 動画終了後のエンドスクリーンと自動再生を無効
+/endscreen.js$script,important,domain=youtube.com
+
+!コメントをワード指定して非表示
+youtube.com##ytd-comment-renderer:has-text(/プライベートAV|AVガール|動画見たら1万|学校でいじめられてます/)
+youtube.com##ytd-comment-thread-renderer:has(#comment:has-text(/不倫|ハフポスト|音楽/i))
+
+
+! チャンネル
+! チャンネルのメンバーとメンバー限定、ショートの枠を非表示
+! メンバー
+youtube.com##[page-subtype="channels"] ytd-item-section-renderer:has(ytd-recognition-shelf-renderer)
+! ショート
+youtube.com##[page-subtype="channels"] ytd-item-section-renderer:not([use-height-hack]):has(ytd-reel-shelf-renderer)
+! メンバー限定の動画
+youtube.com##[page-subtype="channels"] ytd-item-section-renderer:has(.badge-style-type-members-only)
+
+! 検索結果
+! 検索結果の「他の人はこちらも視聴しています」や「ショート」を非表示
+youtube.com##ytd-search ytd-item-section-renderer>#contents>:not(ytd-video-renderer),ytd-secondary-search-container-renderer
+! チャンネルを表示させる場合
+youtube.com##ytd-search ytd-item-section-renderer>#contents>:not(ytd-video-renderer,ytd-channel-renderer),ytd-secondary-search-container-renderer
+
+! ミックスリストを非表示
+! ホームのミックスリスト
+youtube.com##[page-subtype="home"] ytd-rich-item-renderer:has(#video-title-link[title*="ミックス"][href$="start_radio=1"])
+! 動画右のミックスリスト
+youtube.com##ytd-watch-next-secondary-results-renderer ytd-compact-radio-renderer
+! youtube musicのプレイリスト
+youtube.com##ytd-compact-playlist-renderer
+
+
+! ショートを非表示
+! ホーム
+youtube.com##[page-subtype="home"] ytd-rich-item-renderer:has(#video-title-link:has-text(/#short/i))
+! 動画右
+youtube.com##ytd-watch-next-secondary-results-renderer ytd-compact-video-renderer:has(a[href^="/shorts/"])
+youtube.com##ytd-watch-next-secondary-results-renderer ytd-reel-shelf-renderer
+! 登録チャンネル
+youtube.com##[page-subtype="subscriptions"] ytd-rich-item-renderer:has([overlay-style="SHORTS"])
+! 検索結果
+youtube.com##ytd-search ytd-video-renderer:has([overlay-style="SHORTS"])
