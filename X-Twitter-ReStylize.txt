@@ -1,7 +1,7 @@
 ! Title:X-Twitter-ReStylize
 ! Version:0.0.5
 ! イーロンマスクぜってぇ許さねぇ
-x.com##div[style="transform: translate3d(0px, 0px, 0px) translateY(1000px);"]
+x.com#$# div[style="transform: translate3d(0px, 0px, 0px) translateY(100px);"]
 x.com##button:matches-attr("data-testid"="bookmark")
 x.com#$# a[href$="/i/grok"]{display: none !important;}
 x.com#$# a[href$="/i/spaces/start"]{display: none !important;}
