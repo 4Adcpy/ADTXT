@@ -1,5 +1,5 @@
 ! Title:X-Twitter-ReStylize
-! Version:0.0.5
+! Version:0.0.6
 ! イーロンマスクぜってぇ許さねぇ
 x.com#$# div[style="transform: translate3d(0px, 0px, 0px) translateY(100px);"]
 x.com##button:matches-attr("data-testid"="bookmark")
@@ -61,3 +61,5 @@ x.com##a[href$="/analytics"]:upward(1)
 ! 「もっと見つける」を非表示
 x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(h2:has-text(もっと見つける))
 x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(h2:has-text(もっと見つける)) ~ div
+! 「サブスクされる」を非表示
+x.com##div[data-testid="UserName"] a[href="/i/premium_sign_up"][style]
