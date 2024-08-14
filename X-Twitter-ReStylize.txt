@@ -10,6 +10,8 @@ x.com#$# a[href$="/i/premium_sign_up"]{display: none !important;}
 x.com#$# a[href$="jobs"]{display: none !important;}
 x.com#$# a[href$="/settings/monetization"]{display: none !important;}
 x.com#$# a[href$="/i/bookmarks"]{display: none !important;}
+x.com###react-root > div.css-175oi2r.r-13awgt0.r-12vffkv > div.css-175oi2r.r-13awgt0.r-12vffkv > div.css-175oi2r.r-1f2l425.r-13qz1uu.r-417010.r-18u37iz:last-child > header.css-175oi2r.r-lrvibr.r-1g40b8q.r-obd0qt.r-16y2uox:nth-child(3) > div.css-175oi2r.r-o96wvk.r-pt392 > div.css-175oi2r.r-aqfbo4.r-1pi2tsx.r-1xcajam.r-ipm5af > div.css-175oi2r.r-1pi2tsx.r-1wtj0ep.r-1rnoaur.r-o96wvk.r-1ubuhtd > div.css-175oi2r.r-1habvwh:first-child > div.css-175oi2r.r-dnmrzs.r-1559e4e:first-child > h1.css-175oi2r.r-1awozwy.r-1pz39u2.r-1loqt21.r-6koalj.r-16y2uox.r-1777fci.r-1524zjh > a.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-u4tkfy.r-y6eg4e.r-o7ynqc.r-6416eg.r-1ny4l3l.r-1loqt21 > div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-1i10wst.r-135wba7.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci > svg.r-4qtqp9.r-yyyyoo.r-dnmrzs.r-bnwqim.r-lrvibr.r-m6rgpd.r-gupqjj.r-18jsvk2.r-16y2uox.r-8kz0gk:first-child
+
 !　おすすめユーザーを非表示
 x.com##[aria-label^=タイムライン][aria-label$="さんのポスト"]  [data-testid="cellInnerDiv"]:is(:has(+div [aria-label^="フォロー "][role="button"]),:has([aria-label^="フォロー "][role="button"]),:has(a[href^="/i/connect_people?"]),:has(a[href^="/i/connect_people?"])+div:has(>div>div:empty))
 ! 「新しいリストを見つける」を非表示
