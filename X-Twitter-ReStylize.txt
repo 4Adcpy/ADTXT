@@ -7,6 +7,7 @@ x.com#$# a[href$="/i/grok"]{display: none !important;}
 x.com#$# a[href$="/i/spaces/start"]{display: none !important;}
 x.com#$# a[href$="/communities"]{display: none !important;}
 x.com#$# a[href$="/i/premium_sign_up"]{display: none !important;}
+x.com## a[href$="/i/premium_sign_up"]{display: none !important;}
 x.com#$# a[href$="jobs"]{display: none !important;}
 x.com#$# a[href$="/settings/monetization"]{display: none !important;}
 x.com#$# a[href$="/i/bookmarks"]{display: none !important;}
