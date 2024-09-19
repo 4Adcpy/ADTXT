@@ -2,7 +2,8 @@
 ! Version:0.0.8
 ! イーロンマスクぜってぇ許さねぇ
 
-x.com#$# a[href$="/i/bookmarks"]{display: none !important;}
+
+x.com##button:matches-attr("data-testid"="bookmark")
 
 !おすすめユーザーを非表示
 x.com##[aria-label^=タイムライン][aria-label$="さんのポスト"]  [data-testid="cellInnerDiv"]:is(:has(+div [aria-label^="フォロー "][role="button"]),:has([aria-label^="フォロー "][role="button"]),:has(a[href^="/i/connect_people?"]),:has(a[href^="/i/connect_people?"])+div:has(>div>div:empty))
@@ -38,8 +39,6 @@ x.com##a[href="/jobs"]
 
 !「おすすめ」と「フォロー中」のタブを非表示
 x.com##[aria-label="ホームタイムライン"] > div:first-child:has(> div:first-child > div:first-child > nav > div > div:nth-child(2) > div > div:first-child)
-! おすすめだけ非表示
-x.com##[aria-label="ホームタイムライン"] > div:first-child > div:first-child > div:first-child > nav > div > div:nth-child(2) > div > div:first-child
 
 
 ! トレンドをワード指定して非表示
@@ -49,9 +48,9 @@ x.com##div[data-testid="trend"]:has-text(/トレンド/)
 
 !トレンド要素以外を非表示
 x.com##[aria-label="タイムライン: 話題を検索"] > div > div
-x.com##[data-testid="cellInnerDiv"]:has([data-testid="trend"]):style(display: initial !important)
-x.com##[aria-label="タイムライン: 話題を検索"] [data-testid="cellInnerDiv"]:has(h2 > div > span:has-text(トレンド)):style(display: initial !important)
-x.com##[aria-label="タイムライン: 話題を検索"]>div>div:has(>div>div>div:not([data-testid="trend"]))
+!x.com##[data-testid="cellInnerDiv"]:has([data-testid="trend"]):style(display: initial !important)
+!x.com##[aria-label="タイムライン: 話題を検索"] [data-testid="cellInnerDiv"]:has(h2 > div > span:has-text(トレンド)):style(display: initial !important)
+!x.com##[aria-label="タイムライン: 話題を検索"]>div>div:has(>div>div>div:not([data-testid="trend"]))
 
 !ニュースやスポーツなどのタブを非表示
 ! おすすめ
