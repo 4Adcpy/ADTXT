@@ -2,16 +2,16 @@
 ! Version:0.0.8
 ! イーロンマスクぜってぇ許さねぇ
 
-おすすめユーザーを非表示
+!おすすめユーザーを非表示
 x.com##[aria-label^=タイムライン][aria-label$="さんのポスト"]  [data-testid="cellInnerDiv"]:is(:has(+div [aria-label^="フォロー "][role="button"]),:has([aria-label^="フォロー "][role="button"]),:has(a[href^="/i/connect_people?"]),:has(a[href^="/i/connect_people?"])+div:has(>div>div:empty))
 
-「新しいリストを見つける」を非表示
+!「新しいリストを見つける」を非表示
 x.com##[aria-label="タイムライン: 自分のリスト"] [data-testid="cellInnerDiv"]:is(:has(h2):has(+div [aria-label="フォロー"][role="button"]),:has([aria-label="フォロー"][role="button"]),:has([href="/i/lists/suggested"]))
 
-「コミュニティを探す」を非表示
+!「コミュニティを探す」を非表示
 x.com##[aria-label="タイムライン: タイムラインを検索"] [data-testid="cellInnerDiv"]:is(:has(+ div [href^="/i/communities/"]),:has([href="/i/communities/suggested"]),:has([href="/i/communities/suggested"]) + div:has(> div > div:empty))
 
-サイドバーの「いまどうしてる？」「スペース」「認証を受ける」「おすすめユーザー」「関連性の高いアカウント」を非表示
+!サイドバーの「いまどうしてる？」「スペース」「認証を受ける」「おすすめユーザー」「関連性の高いアカウント」を非表示
 x.com##[aria-label="トレンド"] > div > div:has([aria-label="プレミアムにサブスクライブ"])
 x.com##[aria-label="トレンド"] > div > div:has([aria-label="タイムライン: トレンド"])
 x.com##[aria-label="トレンド"] > div > div:has([aria-label^="スペース、"])
@@ -22,7 +22,7 @@ x.com##nav[aria-label="フッター"]
 x.com##[aria-label="トレンド"] > div > div
 x.com##[aria-label="トレンド"] > div > div:has(:is(form[aria-label="検索"],[data-testid="searchFiltersAdvancedSearch"])):style(display:flex!important)
 
-サイドバーから「Grok」「コミュニティ」「プレミアム」を非表示
+!サイドバーから「Grok」「コミュニティ」「プレミアム」を非表示
 ! Grok
 x.com##a[href="/i/grok"]
 ! コミュニティ
