@@ -15,7 +15,7 @@ x.com##[aria-label="タイムライン: 自分のリスト"] [data-testid="cellI
 x.com##[aria-label="タイムライン: タイムラインを検索"] [data-testid="cellInnerDiv"]:is(:has(+ div [href^="/i/communities/"]),:has([href="/i/communities/suggested"]),:has([href="/i/communities/suggested"]) + div:has(> div > div:empty))
 
 !サイドバーの「いまどうしてる？」「スペース」「認証を受ける」「おすすめユーザー」「関連性の高いアカウント」を非表示
-x.com##[aria-label="トレンド"] > div > div:has([aria-label="プレミアムにサブスクライブ"])
+x.com##[aria-label="トレンド"] > div > div:has([aria-label="プレミアムを入手"])
 x.com##[aria-label="トレンド"] > div > div:has([aria-label="タイムライン: トレンド"])
 x.com##[aria-label="トレンド"] > div > div:has([aria-label^="スペース、"])
 x.com##[aria-label="トレンド"] > div > div:has([aria-label="認証を受ける"])
