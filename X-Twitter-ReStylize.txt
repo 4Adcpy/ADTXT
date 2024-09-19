@@ -40,8 +40,10 @@ x.com##[aria-label="ホームタイムライン"] > div:first-child:has(> div:fi
 x.com##[aria-label="ホームタイムライン"] > div:first-child > div:first-child > div:first-child > nav > div > div:nth-child(2) > div > div:first-child
 
 
-
-
+! トレンドをワード指定して非表示
+x.com##div[data-testid="trend"]:has-text(/トレンド/)
+x.com##div[aria-label="タイムライン: 話題を検索"] div[data-testid="trend"] > div[id] > div:first-child > div:first-child:not(:only-child)
+x.com##div[aria-label="タイムライン: 話題を検索"] div[data-testid="trend"] > div[id] > div:first-child > div:nth-child(2)
 
 !トレンド要素以外を非表示
 x.com##[aria-label="タイムライン: 話題を検索"] > div > div
