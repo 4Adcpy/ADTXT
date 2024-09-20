@@ -1,7 +1,6 @@
 ! Title:X-Twitter-ReStylize
-! Version:0.0.8
+! Version:0.0.9
 ! イーロンマスクぜってぇ許さねぇ
-
 
 x.com##button:matches-attr("data-testid"="bookmark")
 
@@ -14,14 +13,11 @@ x.com##[aria-label="タイムライン: 自分のリスト"] [data-testid="cellI
 !「コミュニティを探す」を非表示
 x.com##[aria-label="タイムライン: タイムラインを検索"] [data-testid="cellInnerDiv"]:is(:has(+ div [href^="/i/communities/"]),:has([href="/i/communities/suggested"]),:has([href="/i/communities/suggested"]) + div:has(> div > div:empty))
 
+!トレンド要素を非表示
+x.com##[aria-label="タイムライン: 話題を検索"] > div > div
+x.com##[aria-label="タイムライン: 話題を検索"]>div>div:has(>div>div>div:not([data-testid="trend"]))
+
 !サイドバーの「いまどうしてる？」「スペース」「認証を受ける」「おすすめユーザー」「関連性の高いアカウント」を非表示
-x.com##[aria-label="トレンド"] > div > div:has([aria-label="プレミアムを入手"])
-x.com##[aria-label="トレンド"] > div > div:has([aria-label="タイムライン: トレンド"])
-x.com##[aria-label="トレンド"] > div > div:has([aria-label^="スペース、"])
-x.com##[aria-label="トレンド"] > div > div:has([aria-label="認証を受ける"])
-x.com##[aria-label="トレンド"] > div > div:has([aria-label="おすすめユーザー"])
-x.com##[aria-label="トレンド"] > div > div:has([aria-label="関連性の高いアカウント"])
-x.com##nav[aria-label="フッター"]
 x.com##[aria-label="トレンド"] > div > div
 x.com##[aria-label="トレンド"] > div > div:has(:is(form[aria-label="検索"],[data-testid="searchFiltersAdvancedSearch"])):style(display:flex!important)
 
@@ -37,26 +33,11 @@ x.com##a[href="/i/verified-orgs-signup"]
 ! 求人
 x.com##a[href="/jobs"]
 
-!「おすすめ」と「フォロー中」のタブを非表示
-x.com##[aria-label="ホームタイムライン"] > div:first-child:has(> div:first-child > div:first-child > nav > div > div:nth-child(2) > div > div:first-child)
-
-
-! トレンドをワード指定して非表示
-x.com##div[data-testid="trend"]:has-text(/トレンド/)
-!x.com##div[aria-label="タイムライン: 話題を検索"] div[data-testid="trend"] > div[id] > div:first-child > div:first-child:not(:only-child)
-!x.com##div[aria-label="タイムライン: 話題を検索"] div[data-testid="trend"] > div[id] > div:first-child > div:nth-child(2)
-
-!トレンド要素以外を非表示
-x.com##[aria-label="タイムライン: 話題を検索"] > div > div
-!x.com##[data-testid="cellInnerDiv"]:has([data-testid="trend"]):style(display: initial !important)
-!x.com##[aria-label="タイムライン: 話題を検索"] [data-testid="cellInnerDiv"]:has(h2 > div > span:has-text(トレンド)):style(display: initial !important)
-!x.com##[aria-label="タイムライン: 話題を検索"]>div>div:has(>div>div>div:not([data-testid="trend"]))
-
 !ニュースやスポーツなどのタブを非表示
 ! おすすめ
 x.com##a[href="/explore/tabs/for_you"]:upward(1)
 ! トレンド
-x.com##a[href="/explore/tabs/keyword"]:upward(1)
+x.com##a[href="/explore/tabs/trending"]:upward(1)
 ! ニュース
 x.com##a[href="/explore/tabs/news"]:upward(1)
 ! スポーツ
@@ -75,17 +56,16 @@ x.com##[aria-label$="さんのメディア"] [role="listitem"] > div > div > div
 
 !ツイート数やいいね数、リプライ数、ブックマーク数を非表示
 ! リツイート数
-x.com##[data-testid="retweet"] span[data-testid="app-text-transition-container"]
-x.com##[data-testid="unretweet"] span[data-testid="app-text-transition-container"]
+!x.com##[data-testid="retweet"] span[data-testid="app-text-transition-container"]
+!x.com##[data-testid="unretweet"] span[data-testid="app-text-transition-container"]
 ! いいね数
-x.com##[data-testid="like"] span[data-testid="app-text-transition-container"]
-x.com##[data-testid="unlike"] span[data-testid="app-text-transition-container"]
+!x.com##[data-testid="like"] span[data-testid="app-text-transition-container"]
+!x.com##[data-testid="unlike"] span[data-testid="app-text-transition-container"]
 ! リプライ数
-x.com##[data-testid="reply"] span[data-testid="app-text-transition-container"]
+!x.com##[data-testid="reply"] span[data-testid="app-text-transition-container"]
 ! ブックマーク数
 x.com##[aria-label="タイムライン: 会話"] article[tabindex="-1"] [data-testid="removeBookmark"] > div > div:nth-child(2)
 x.com##[aria-label="タイムライン: 会話"] article[tabindex="-1"] [data-testid="bookmark"] > div > div:nth-child(2)
-
 
 !閲覧数・インプレッション数を非表示
 x.com##[aria-label="タイムライン: 会話"] article[tabindex="-1"] div[aria-hidden="true"]:nth-child(2)
@@ -93,16 +73,14 @@ x.com##[aria-label="タイムライン: 会話"] article[tabindex="-1"] div[aria
 x.com##article[tabindex="0"] div[role="group"] > div:nth-child(4)
 x.com##a[href$="/analytics"]:upward(1)
 
-!ツイート欄を非表示
-x.com##[aria-label="ホームタイムライン"] [role="progressbar"] + div:has([data-testid="tweetTextarea_0_label"])
-x.com##[aria-label="タイムライン: 会話"] [role="progressbar"] + div:has([data-testid="tweetTextarea_0_label"]) 
-x.com##[aria-label="ホームタイムライン"] > div.r-14lw9ot:nth-child(3)
-x.com##[aria-label="ホームタイムライン"] > div.r-1sw30gj:nth-child(4)
-x.com##[aria-label="タイムライン: 会話"] div.r-184en5c:nth-child(2)
-
 !「もっと見つける」を非表示
 x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(h2:has-text(もっと見つける))
 x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(h2:has-text(もっと見つける)) ~ div
+
+!ツイート欄を非表示
+x.com##[aria-label="ホームタイムライン"] > div.r-14lw9ot:nth-child(3)
+x.com##[aria-label="ホームタイムライン"] > div.r-1sw30gj:nth-child(4)
+x.com##[aria-label="タイムライン: 会話"] div.r-184en5c:nth-child(2)
 
 !app link等のサムネイル付きの短縮URLを消せるフィルター
 x.com##[data-testid="cellInnerDiv"]:has([aria-labelledby][id]>[href*="app.link"])
