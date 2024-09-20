@@ -30,10 +30,16 @@ x.com##a[href="/i/grok"]
 x.com##a[href$="/communities"]
 ! プレミアム
 x.com##a[href="/i/premium_sign_up"]
+x.com##a[href$="/i/premium_sign_up"]
+! 収益化
+x.com##a[href="/settings/monetization"]
 ! 認証済み組織
 x.com##a[href="/i/verified-orgs-signup"]
 ! 求人
 x.com##a[href="/jobs"]
+! スペース
+x.com##a[href$="i/spaces/start"]
+
 
 !ニュースやスポーツなどのタブを非表示
 ! おすすめ
