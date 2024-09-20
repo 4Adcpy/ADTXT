@@ -4,6 +4,8 @@
 
 x.com##button:matches-attr("data-testid"="bookmark")
 
+x.com##[aria-label="プレミアムを入手"] > div > div
+
 !おすすめユーザーを非表示
 x.com##[aria-label^=タイムライン][aria-label$="さんのポスト"]  [data-testid="cellInnerDiv"]:is(:has(+div [aria-label^="フォロー "][role="button"]),:has([aria-label^="フォロー "][role="button"]),:has(a[href^="/i/connect_people?"]),:has(a[href^="/i/connect_people?"])+div:has(>div>div:empty))
 
