@@ -30,7 +30,8 @@ x.com##a[href="/i/grok"]
 x.com##a[href$="/communities"]
 ! プレミアム
 x.com##a[href="/i/premium_sign_up"]
-x.com##a[href="/i/premium_sign_up*"]
+x.com##a[href="/i/premium_sign_up^"]
+
 ! 収益化
 x.com##a[href="/settings/monetization"]
 ! 認証済み組織
