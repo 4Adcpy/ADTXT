@@ -1,5 +1,5 @@
 ! Title:X-Twitter-ReStylize
-! Version:0.0.9
+! Version:0.0.10
 ! イーロンマスクぜってぇ許さねぇ
 
 x.com##button:matches-attr("data-testid"="bookmark")
@@ -30,7 +30,7 @@ x.com##a[href="/i/grok"]
 x.com##a[href$="/communities"]
 ! プレミアム
 x.com##a[href="/i/premium_sign_up"]
-x.com##a[href$="/i/premium_sign_up"]
+x.com##a[href="/i/premium_sign_up*"]
 ! 収益化
 x.com##a[href="/settings/monetization"]
 ! 認証済み組織
@@ -46,6 +46,7 @@ x.com##a[href$="i/spaces/start"]
 x.com##a[href="/explore/tabs/for_you"]:upward(1)
 ! トレンド
 x.com##a[href="/explore/tabs/trending"]:upward(1)
+x.com##a[href="/explore/tabs/keyword"]:upward(1)
 ! ニュース
 x.com##a[href="/explore/tabs/news"]:upward(1)
 ! スポーツ
@@ -94,7 +95,7 @@ x.com##[aria-label="タイムライン: 会話"] div.r-184en5c:nth-child(2)
 x.com##[data-testid="cellInnerDiv"]:has([aria-labelledby][id]>[href*="app.link"])
 
 !チェックマーク付きのアカウントによるリプライを消す
-x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(article[tabindex="0"] [data-testid="icon-verified"])
+!x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(article[tabindex="0"] [data-testid="icon-verified"])
 
 
 
