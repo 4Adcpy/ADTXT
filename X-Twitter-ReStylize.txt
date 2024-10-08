@@ -1,5 +1,5 @@
 ! Title:X-Twitter-ReStylize
-! Version:0.0.11
+! Version:0.0.12
 ! イーロンマスクぜってぇ許さねぇ
 
 x.com##button:matches-attr("data-testid"="bookmark")
@@ -10,7 +10,7 @@ x.com##[aria-label="プレミアムを入手"] > div > div
 x.com##[aria-label^=タイムライン][aria-label$="さんのポスト"]  [data-testid="cellInnerDiv"]:is(:has(+div [aria-label^="フォロー "][role="button"]),:has([aria-label^="フォロー "][role="button"]),:has(a[href^="/i/connect_people?"]),:has(a[href^="/i/connect_people?"])+div:has(>div>div:empty))
 
 
-x.com##[aria-label="ホームタイムライン"] > div[role="presentation"]:has(a[href="/home"]):first-child {display: none;}
+x.com##[aria-label="タイムライン"] > div[role="presentation"]:has(a[href="/home"]):first-child {display: none;}
 
 
 !「新しいリストを見つける」を非表示
@@ -100,7 +100,4 @@ x.com##[aria-label="タイムライン: 会話"] div.r-184en5c:nth-child(2)
 x.com##[data-testid="cellInnerDiv"]:has([aria-labelledby][id]>[href*="app.link"])
 
 !チェックマーク付きのアカウントによるリプライを消す
-!x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(article[tabindex="0"] [data-testid="icon-verified"])
-
-
-
+x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(article[tabindex="0"] [data-testid="icon-verified"])
