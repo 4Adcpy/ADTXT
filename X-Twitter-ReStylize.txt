@@ -9,6 +9,12 @@ x.com##[aria-label="プレミアムを入手"] > div > div
 !おすすめユーザーを非表示
 x.com##[aria-label^=タイムライン][aria-label$="さんのポスト"]  [data-testid="cellInnerDiv"]:is(:has(+div [aria-label^="フォロー "][role="button"]),:has([aria-label^="フォロー "][role="button"]),:has(a[href^="/i/connect_people?"]),:has(a[href^="/i/connect_people?"])+div:has(>div>div:empty))
 
+
+x.com##div[role="presentation"]:has(a[href="/home"]):first-child {
+	display: none;
+}
+
+
 !「新しいリストを見つける」を非表示
 x.com##[aria-label="タイムライン: 自分のリスト"] [data-testid="cellInnerDiv"]:is(:has(h2):has(+div [aria-label="フォロー"][role="button"]),:has([aria-label="フォロー"][role="button"]),:has([href="/i/lists/suggested"]))
 
