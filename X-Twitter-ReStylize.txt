@@ -1,5 +1,5 @@
 ! Title:X-Twitter-ReStylize
-! Version:0.0.14
+! Version:0.0.15
 ! イーロンマスクぜってぇ許さねぇ
 
 
@@ -31,6 +31,8 @@ x.com##[aria-label="トレンド"] > div > div:has(:is(form[aria-label="検索"]
 !サイドバーから「Grok」「コミュニティ」「プレミアム」を非表示
 ! Grok
 x.com##a[href="/i/grok"]
+x.com##[aria-label="Grokのアクション"] :first-child
+
 ! コミュニティ
 x.com##a[href$="/communities"]
 ! プレミアム
@@ -102,103 +104,3 @@ x.com##[data-testid="cellInnerDiv"]:has([aria-labelledby][id]>[href*="app.link"]
 
 !チェックマーク付きのアカウントによるリプライを消す
 x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(article[tabindex="0"] [data-testid="icon-verified"])
-
-mobile.x.com##button:matches-attr("data-testid"="bookmark")
-
-mobile.x.com##[aria-label="プレミアムを入手"] > div > div
-
-!おすすめユーザーを非表示
-mobile.x.com##[aria-label^=タイムライン][aria-label$="さんのポスト"]  [data-testid="cellInnerDiv"]:is(:has(+div [aria-label^="フォロー "][role="button"]),:has([aria-label^="フォロー "][role="button"]),:has(a[href^="/i/connect_people?"]),:has(a[href^="/i/connect_people?"])+div:has(>div>div:empty))
-
-
-mobile.x.com##[aria-label="タイムライン"] > div[role="presentation"]:has(a[href="/home"]):first-child {display: none;}
-mobile.x.com##[aria-label="ホームタイムライン"] > div[role="presentation"]:has(a[href="/home"]):first-child {display: none;}
-
-!「新しいリストを見つける」を非表示
-mobile.x.com##[aria-label="タイムライン: 自分のリスト"] [data-testid="cellInnerDiv"]:is(:has(h2):has(+div [aria-label="フォロー"][role="button"]),:has([aria-label="フォロー"][role="button"]),:has([href="/i/lists/suggested"]))
-
-!「コミュニティを探す」を非表示
-mobile.x.com##[aria-label="タイムライン: タイムラインを検索"] [data-testid="cellInnerDiv"]:is(:has(+ div [href^="/i/communities/"]),:has([href="/i/communities/suggested"]),:has([href="/i/communities/suggested"]) + div:has(> div > div:empty))
-
-!トレンド要素を非表示
-mobile.x.com##[aria-label="タイムライン: 話題を検索"] > div > div
-mobile.x.com##[aria-label="タイムライン: 話題を検索"]>div>div:has(>div>div>div:not([data-testid="trend"]))
-
-!サイドバーの「いまどうしてる？」「スペース」「認証を受ける」「おすすめユーザー」「関連性の高いアカウント」を非表示
-mobile.x.com##[aria-label="トレンド"] > div > div
-mobile.x.com##[aria-label="トレンド"] > div > div:has(:is(form[aria-label="検索"],[data-testid="searchFiltersAdvancedSearch"])):style(display:flex!important)
-
-!サイドバーから「Grok」「コミュニティ」「プレミアム」を非表示
-! Grok
-mobile.x.com##a[href="/i/grok"]
-! コミュニティ
-mobile.x.com##a[href$="/communities"]
-! プレミアム
-mobile.x.com##a[href="/i/premium_sign_up"]
-mobile.x.com##a[href="/i/premium_sign_up^"]
-
-! 収益化
-mobile.x.com##a[href="/settings/monetization"]
-! 認証済み組織
-mobile.x.com##a[href="/i/verified-orgs-signup"]
-! 求人
-mobile.x.com##a[href="/jobs"]
-! スペース
-mobile.x.com##a[href$="i/spaces/start"]
-
-
-!ニュースやスポーツなどのタブを非表示
-! おすすめ
-mobile.x.com##a[href="/explore/tabs/for_you"]:upward(1)
-! トレンド
-mobile.x.com##a[href="/explore/tabs/trending"]:upward(1)
-mobile.x.com##a[href="/explore/tabs/keyword"]:upward(1)
-! ニュース
-mobile.x.com##a[href="/explore/tabs/news"]:upward(1)
-! スポーツ
-mobile.x.com##a[href="/explore/tabs/sports"]:upward(1)
-! エンターテイメント
-mobile.x.com##a[href="/explore/tabs/entertainment"]:upward(1)
-
-!省略されたツイートを表示
-mobile.x.com##[data-testid="tweetText"]:style(line-height: normal !important; -webkit-line-clamp: initial !important;)
-
-!「ツイートの作成者が、このツイートをセンシティブな内容として設定しました。」を非表示
-mobile.x.com##article[data-testid="tweet"] div[aria-labelledby] > div > div > div > div > div:style(filter: none !important)
-mobile.x.com##article[data-testid="tweet"] div[aria-labelledby] > div:not([data-testid]) > div:not([role="button"]) > div:only-child > div > div:nth-child(2):not([data-testid="tweetText"])
-mobile.x.com##[aria-label$="さんのメディア"] [role="listitem"] > div > div > div > div:first-child:style(filter: none !important)
-mobile.x.com##[aria-label$="さんのメディア"] [role="listitem"] > div > div > div > div:last-child
-
-!ツイート数やいいね数、リプライ数、ブックマーク数を非表示
-! リツイート数
-!mobile.x.com##[data-testid="retweet"] span[data-testid="app-text-transition-container"]
-!mobile.x.com##[data-testid="unretweet"] span[data-testid="app-text-transition-container"]
-! いいね数
-!mobile.x.com##[data-testid="like"] span[data-testid="app-text-transition-container"]
-!mobile.x.com##[data-testid="unlike"] span[data-testid="app-text-transition-container"]
-! リプライ数
-!mobile.x.com##[data-testid="reply"] span[data-testid="app-text-transition-container"]
-! ブックマーク数
-mobile.x.com##[aria-label="タイムライン: 会話"] article[tabindex="-1"] [data-testid="removeBookmark"] > div > div:nth-child(2)
-mobile.x.com##[aria-label="タイムライン: 会話"] article[tabindex="-1"] [data-testid="bookmark"] > div > div:nth-child(2)
-
-!閲覧数・インプレッション数を非表示
-mobile.x.com##[aria-label="タイムライン: 会話"] article[tabindex="-1"] div[aria-hidden="true"]:nth-child(2)
-mobile.x.com##[aria-label="タイムライン: 会話"] article[tabindex="-1"] div[aria-hidden="true"]:nth-child(2) + div:last-child
-mobile.x.com##article[tabindex="0"] div[role="group"] > div:nth-child(4)
-mobile.x.com##a[href$="/analytics"]:upward(1)
-
-!「もっと見つける」を非表示
-mobile.x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(h2:has-text(もっと見つける))
-mobile.x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(h2:has-text(もっと見つける)) ~ div
-
-!ツイート欄を非表示
-mobile.x.com##[aria-label="ホームタイムライン"] > div.r-14lw9ot:nth-child(3)
-mobile.x.com##[aria-label="ホームタイムライン"] > div.r-1sw30gj:nth-child(4)
-mobile.x.com##[aria-label="タイムライン: 会話"] div.r-184en5c:nth-child(2)
-
-!app link等のサムネイル付きの短縮URLを消せるフィルター
-mobile.x.com##[data-testid="cellInnerDiv"]:has([aria-labelledby][id]>[href*="app.link"])
-
-!チェックマーク付きのアカウントによるリプライを消す
-mobile.x.com##[aria-label="タイムライン: 会話"] [data-testid="cellInnerDiv"]:has(article[tabindex="0"] [data-testid="icon-verified"])
